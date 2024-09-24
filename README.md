@@ -8,6 +8,9 @@ that it works, you can clone the repository and change the start and end values 
 
 The below examples are of limited range, so that I could get some sort of output. 
 
+
+[Machine Code Generation](#Machine-Code-Generation)
+
 # Identifiers
 ```rust
 fn using_identifier(n: u32) {
