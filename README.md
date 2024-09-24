@@ -12,8 +12,8 @@ The below examples are of limited range, so that I could get some sort of output
 [Machine Code Generation](#Machine-Code-Generation)
 
 # Rust Code Generation
-[Identifiers](##Identifiers)
-[Raw numbers](##Raw-numbers)
+[Identifiers](#Identifiers)
+[Raw numbers](#Raw-numbers)
 
 For these examples, I used a range of 0 - 40 for unsigned values and isize::MIN - isize::MIN + 40
 
