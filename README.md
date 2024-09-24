@@ -546,8 +546,7 @@ And this long list of jumps after lead to
 ![image](https://github.com/user-attachments/assets/ac892683-5fc5-4395-98c8-e354669977f4)
 
 This, which prints out the -11 message, more weird jumping, and then
-![image](https://github.com/user-attachments/assets/b844a089-a993-4969-b771-9e812f171373)
+![image](https://github.com/user-attachments/assets/26b1d7c5-ff48-45e4-8089-4885496900a2)
 
 We print out the 101 message and return...
-![image](https://github.com/user-attachments/assets/0f3671d6-74eb-492e-a738-05af5858b4d6)
-
+![image](https://github.com/user-attachments/assets/eba30005-a425-477b-bdcc-0a3c125cddf5)
