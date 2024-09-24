@@ -1,4 +1,4 @@
-pub use is_odd_macro::is_odd;
+pub use is_odd_macro_proc::is_odd;
 
 #[cfg(test)]
 mod tests {

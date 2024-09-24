@@ -2,7 +2,7 @@
 
 use std::str::FromStr;
 use proc_macro2::{Ident, TokenStream};
-use quote::{quote, ToTokens, TokenStreamExt};
+use quote::{format_ident, quote, ToTokens};
 use syn::{parse2, Expr};
 
 /// Should be isize::MIN. -40 for testing.
@@ -45,8 +45,6 @@ fn is_odd_macro_expr_isize(expr: Expr) -> TokenStream {
         }
     };
 
-    let mut rest = vec![];
-
     let t = TokenStream::from_str("true").unwrap();
     let f = TokenStream::from_str("false").unwrap();
 
@@ -63,7 +61,7 @@ fn is_odd_macro_expr_isize(expr: Expr) -> TokenStream {
             }
         };
 
-        rest.push(next);
+        out.extend(next);
     }
 
     let is_odd = if ISIZE_RANGE_END % 2 != 0 {
@@ -72,13 +70,11 @@ fn is_odd_macro_expr_isize(expr: Expr) -> TokenStream {
         &f
     };
 
-    rest.push(quote! {
+    out.extend(quote! {
         else {
             #is_odd
         }
     });
-
-    out.append_all(rest);
 
     out
 
@@ -92,8 +88,6 @@ fn is_odd_macro_expr_usize(ident: Expr) -> TokenStream {
             false
         }
     };
-
-    let mut rest = vec![];
 
     let t = TokenStream::from_str("true").unwrap();
     let f = TokenStream::from_str("false").unwrap();
@@ -111,7 +105,7 @@ fn is_odd_macro_expr_usize(ident: Expr) -> TokenStream {
             }
         };
 
-        rest.push(next);
+        out.extend(next);
     }
 
     let is_odd = if USIZE_RANGE_END % 2 != 0 {
@@ -120,13 +114,11 @@ fn is_odd_macro_expr_usize(ident: Expr) -> TokenStream {
         &f
     };
 
-    rest.push(quote! {
+    out.extend(quote! {
         else {
             #is_odd
         }
     });
-
-    out.append_all(rest);
 
     out
 }
@@ -139,8 +131,6 @@ fn is_odd_macro_ident(ident: Ident) -> TokenStream {
             false
         }
     };
-
-    let mut rest = vec![];
 
     let t = TokenStream::from_str("true").unwrap();
     let f = TokenStream::from_str("false").unwrap();
@@ -158,7 +148,7 @@ fn is_odd_macro_ident(ident: Ident) -> TokenStream {
             }
         };
 
-        rest.push(next);
+        out.extend(next);
     }
 
     let is_odd = if USIZE_RANGE_END % 2 != 0 {
@@ -167,13 +157,11 @@ fn is_odd_macro_ident(ident: Ident) -> TokenStream {
         &f
     };
 
-    rest.push(quote! {
+    out.extend(quote! {
         else {
             #is_odd
         }
     });
-
-    out.append_all(rest);
 
     out
 }

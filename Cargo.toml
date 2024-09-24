@@ -1,11 +1,10 @@
 [package]
-# changeme
-name = "is-odd"
+name = "is-odd-macro"
 version = "0.1.0"
 edition = "2021"
 
 [workspace]
-members = ["is-odd-macro", "is-odd-macro-core"]
+members = ["is-odd-macro-proc", "is-odd-macro-core"]
 
 [dependencies]
-is-odd-macro = { version = "0.1.0", path = "is-odd-macro" }
+is-odd-macro-proc = { version = "0.1.0", path = "is-odd-macro-proc" }
