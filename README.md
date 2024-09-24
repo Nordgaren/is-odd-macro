@@ -497,7 +497,7 @@ fn is_odd(n: u32) -> bool {
 For loop with jump table to load the right string to print.
 ![image](https://github.com/user-attachments/assets/1e9e32a3-0af0-40b5-b668-20e8d041caf1)
 
-The table generated.
+The table generated. Just two offsets. Each one is the offset from the start of this table to the correct print statement.
 ![image](https://github.com/user-attachments/assets/965bd8d8-d51f-4fb6-94e1-9bd99fe375c6)
 
 In Debug builds, it doesn't optimize the `is_odd(n: u32)` function at all. This generates a comparison all the way to 199.
