@@ -88,7 +88,7 @@ fn is_odd_macro_expr_isize(expr: Expr) -> TokenStream {
 fn is_odd_macro_expr_usize(ident: Expr) -> TokenStream {
     let min = USIZE_RANGE_START;
     let mut out = quote! {
-        if #ident as usize == #min {
+        if #ident == #min {
             false
         }
     };

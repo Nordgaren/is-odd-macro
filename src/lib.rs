@@ -5,8 +5,11 @@ mod tests {
     use crate::*;
 
     #[test]
-    fn using_identifier() {
-        let n = 11;
+    fn test_using_identifier() {
+        using_identifier(11);
+    }
+
+    fn using_identifier(n: u32) {
         assert!(is_odd!(n));
     }
 
