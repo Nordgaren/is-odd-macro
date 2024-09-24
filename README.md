@@ -15,7 +15,7 @@ fn using_identifier() {
 
 fn using_identifier() {
     let n = 11;
-    if n as usize == 0 {
+    if n as usize == 0usize {
         false
     } else if n as usize == 1usize {
         true
@@ -107,85 +107,85 @@ fn using_number() {
 }
 
 fn using_number() {
-    if 10 as usize == 0usize {
+    if 10 == 0usize {
         false
-    } else if 10 as usize == 1usize {
+    } else if 10 == 1usize {
         true
-    } else if 10 as usize == 2usize {
+    } else if 10 == 2usize {
         false
-    } else if 10 as usize == 3usize {
+    } else if 10 == 3usize {
         true
-    } else if 10 as usize == 4usize {
+    } else if 10 == 4usize {
         false
-    } else if 10 as usize == 5usize {
+    } else if 10 == 5usize {
         true
-    } else if 10 as usize == 6usize {
+    } else if 10 == 6usize {
         false
-    } else if 10 as usize == 7usize {
+    } else if 10 == 7usize {
         true
-    } else if 10 as usize == 8usize {
+    } else if 10 == 8usize {
         false
-    } else if 10 as usize == 9usize {
+    } else if 10 == 9usize {
         true
-    } else if 10 as usize == 10usize {
+    } else if 10 == 10usize {
         false
-    } else if 10 as usize == 11usize {
+    } else if 10 == 11usize {
         true
-    } else if 10 as usize == 12usize {
+    } else if 10 == 12usize {
         false
-    } else if 10 as usize == 13usize {
+    } else if 10 == 13usize {
         true
-    } else if 10 as usize == 14usize {
+    } else if 10 == 14usize {
         false
-    } else if 10 as usize == 15usize {
+    } else if 10 == 15usize {
         true
-    } else if 10 as usize == 16usize {
+    } else if 10 == 16usize {
         false
-    } else if 10 as usize == 17usize {
+    } else if 10 == 17usize {
         true
-    } else if 10 as usize == 18usize {
+    } else if 10 == 18usize {
         false
-    } else if 10 as usize == 19usize {
+    } else if 10 == 19usize {
         true
-    } else if 10 as usize == 20usize {
+    } else if 10 == 20usize {
         false
-    } else if 10 as usize == 21usize {
+    } else if 10 == 21usize {
         true
-    } else if 10 as usize == 22usize {
+    } else if 10 == 22usize {
         false
-    } else if 10 as usize == 23usize {
+    } else if 10 == 23usize {
         true
-    } else if 10 as usize == 24usize {
+    } else if 10 == 24usize {
         false
-    } else if 10 as usize == 25usize {
+    } else if 10 == 25usize {
         true
-    } else if 10 as usize == 26usize {
+    } else if 10 == 26usize {
         false
-    } else if 10 as usize == 27usize {
+    } else if 10 == 27usize {
         true
-    } else if 10 as usize == 28usize {
+    } else if 10 == 28usize {
         false
-    } else if 10 as usize == 29usize {
+    } else if 10 == 29usize {
         true
-    } else if 10 as usize == 30usize {
+    } else if 10 == 30usize {
         false
-    } else if 10 as usize == 31usize {
+    } else if 10 == 31usize {
         true
-    } else if 10 as usize == 32usize {
+    } else if 10 == 32usize {
         false
-    } else if 10 as usize == 33usize {
+    } else if 10 == 33usize {
         true
-    } else if 10 as usize == 34usize {
+    } else if 10 == 34usize {
         false
-    } else if 10 as usize == 35usize {
+    } else if 10 == 35usize {
         true
-    } else if 10 as usize == 36usize {
+    } else if 10 == 36usize {
         false
-    } else if 10 as usize == 37usize {
+    } else if 10 == 37usize {
         true
-    } else if 10 as usize == 38usize {
+    } else if 10 == 38usize {
         false
-    } else if 10 as usize == 39usize {
+    } else if 10 == 39usize {
         true
     } else {
         false
@@ -293,85 +293,85 @@ fn hexidecimal_number() {
 }
 
 fn hexidecimal_number() {
-    if 0x10 as usize == 0usize {
+    if 0x10 == 0usize {
         false
-    } else if 0x10 as usize == 1usize {
+    } else if 0x10 == 1usize {
         true
-    } else if 0x10 as usize == 2usize {
+    } else if 0x10 == 2usize {
         false
-    } else if 0x10 as usize == 3usize {
+    } else if 0x10 == 3usize {
         true
-    } else if 0x10 as usize == 4usize {
+    } else if 0x10 == 4usize {
         false
-    } else if 0x10 as usize == 5usize {
+    } else if 0x10 == 5usize {
         true
-    } else if 0x10 as usize == 6usize {
+    } else if 0x10 == 6usize {
         false
-    } else if 0x10 as usize == 7usize {
+    } else if 0x10 == 7usize {
         true
-    } else if 0x10 as usize == 8usize {
+    } else if 0x10 == 8usize {
         false
-    } else if 0x10 as usize == 9usize {
+    } else if 0x10 == 9usize {
         true
-    } else if 0x10 as usize == 10usize {
+    } else if 0x10 == 10usize {
         false
-    } else if 0x10 as usize == 11usize {
+    } else if 0x10 == 11usize {
         true
-    } else if 0x10 as usize == 12usize {
+    } else if 0x10 == 12usize {
         false
-    } else if 0x10 as usize == 13usize {
+    } else if 0x10 == 13usize {
         true
-    } else if 0x10 as usize == 14usize {
+    } else if 0x10 == 14usize {
         false
-    } else if 0x10 as usize == 15usize {
+    } else if 0x10 == 15usize {
         true
-    } else if 0x10 as usize == 16usize {
+    } else if 0x10 == 16usize {
         false
-    } else if 0x10 as usize == 17usize {
+    } else if 0x10 == 17usize {
         true
-    } else if 0x10 as usize == 18usize {
+    } else if 0x10 == 18usize {
         false
-    } else if 0x10 as usize == 19usize {
+    } else if 0x10 == 19usize {
         true
-    } else if 0x10 as usize == 20usize {
+    } else if 0x10 == 20usize {
         false
-    } else if 0x10 as usize == 21usize {
+    } else if 0x10 == 21usize {
         true
-    } else if 0x10 as usize == 22usize {
+    } else if 0x10 == 22usize {
         false
-    } else if 0x10 as usize == 23usize {
+    } else if 0x10 == 23usize {
         true
-    } else if 0x10 as usize == 24usize {
+    } else if 0x10 == 24usize {
         false
-    } else if 0x10 as usize == 25usize {
+    } else if 0x10 == 25usize {
         true
-    } else if 0x10 as usize == 26usize {
+    } else if 0x10 == 26usize {
         false
-    } else if 0x10 as usize == 27usize {
+    } else if 0x10 == 27usize {
         true
-    } else if 0x10 as usize == 28usize {
+    } else if 0x10 == 28usize {
         false
-    } else if 0x10 as usize == 29usize {
+    } else if 0x10 == 29usize {
         true
-    } else if 0x10 as usize == 30usize {
+    } else if 0x10 == 30usize {
         false
-    } else if 0x10 as usize == 31usize {
+    } else if 0x10 == 31usize {
         true
-    } else if 0x10 as usize == 32usize {
+    } else if 0x10 == 32usize {
         false
-    } else if 0x10 as usize == 33usize {
+    } else if 0x10 == 33usize {
         true
-    } else if 0x10 as usize == 34usize {
+    } else if 0x10 == 34usize {
         false
-    } else if 0x10 as usize == 35usize {
+    } else if 0x10 == 35usize {
         true
-    } else if 0x10 as usize == 36usize {
+    } else if 0x10 == 36usize {
         false
-    } else if 0x10 as usize == 37usize {
+    } else if 0x10 == 37usize {
         true
-    } else if 0x10 as usize == 38usize {
+    } else if 0x10 == 38usize {
         false
-    } else if 0x10 as usize == 39usize {
+    } else if 0x10 == 39usize {
         true
     } else {
         false
