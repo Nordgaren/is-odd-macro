@@ -12,10 +12,13 @@ The below examples are of limited range, so that I could get some sort of output
 [Machine Code Generation](#Machine-Code-Generation)
 
 # Rust Code Generation
-[Identifiers](#Identifiers)
-[Raw numbers](#Raw-numbers)
-
 For these examples, I used a range of 0 - 40 for unsigned values and isize::MIN - isize::MIN + 40
+
+[Identifiers](#Identifiers)  
+[Raw numbers](#Raw-numbers)  
+[Negative numbers](#Negative-numbers)  
+[Numbers with format identifiers](#Numbers-with-format-identifiers)  
+[ Negative numbers with format identifiers](#Negative-numbers-with-format-identifiers)  
 
 ## Identifiers
 ```rust
@@ -202,7 +205,7 @@ fn using_number() {
 }
 ```
 
-#  Negative numbers
+##  Negative numbers
 ```rust
 fn using_negative_number() {
     is_odd!(-10);
@@ -295,7 +298,7 @@ fn using_negative_number() {
 }
 ```
 
-# Numbers with format identifiers
+## Numbers with format identifiers
 ```rust
 fn hexidecimal_number() {
     is_odd!(0x10);
