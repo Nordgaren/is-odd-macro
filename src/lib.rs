@@ -1,1 +1,1 @@
-pub use proc_macro_template_derive::proc_macro;
+pub use proc_macro_template::proc_macro;
