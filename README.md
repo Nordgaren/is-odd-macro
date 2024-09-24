@@ -1,9 +1,9 @@
 # is-odd-macro
-A crate that exports a macro that generates an if-else statement that tests either an identifier, or a number against ever
+A crate that exports a macro that generates an if-else statement that tests either an identifier, or a number against every
 number in range from T::MIN to T::MAX, with a hard coded value of whether or not the number is odd. This was inspired
 by the JavaScript community, and a meme that shall not be named.
 
-For the love of Graydon, and all that is memory safe. DO NOT USE THIS CRATE. You probably can't even build it. If you want to test
+For the love of Graydon, and all that is memory safe. DO NOT USE THIS CRATE. You probably can't even build/use it. If you want to test
 that it works, you can clone the repository and change the start and end values in `is-odd-macro-cor/src/lib.rs`.
 
 The below examples are of limited range, so that I could get some sort of output. 
@@ -12,6 +12,8 @@ The below examples are of limited range, so that I could get some sort of output
 [Machine Code Generation](#Machine-Code-Generation)
 
 # Identifiers
+For these examples, I used a range of 0 - 40 for unsigned values and isize::MAX - isize::MAX + 40
+
 ```rust
 fn using_identifier(n: u32) {
     is_odd!(n);
