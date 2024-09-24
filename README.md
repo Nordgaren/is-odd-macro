@@ -492,16 +492,16 @@ fn is_odd(n: u32) -> bool {
 }
 ```
 For loop with jump table to load the right string to print.
-![image](https://github.com/user-attachments/assets/b85e49f7-8bae-4477-a753-1cd434bcdc7a)
+![image](https://github.com/user-attachments/assets/1e9e32a3-0af0-40b5-b668-20e8d041caf1)
 
 The table generated.
 ![image](https://github.com/user-attachments/assets/965bd8d8-d51f-4fb6-94e1-9bd99fe375c6)
 
 In Debug builds, it doesn't optimize the `is_odd(n: u32)` function at all. This generates a comparison all the way to 199.
-![image](https://github.com/user-attachments/assets/1bfe02fd-5d73-450b-b01d-2c89b6c83031)
+![image](https://github.com/user-attachments/assets/34fc09ec-ac72-4c1e-96f5-4564f3d306b2)
 
 It generates a very normal looking for loop.
-![image](https://github.com/user-attachments/assets/5d1f8d58-c917-4d10-a713-ab591b4b82da)
+![image](https://github.com/user-attachments/assets/8ea300bf-9223-47ae-8679-abb40d7f370f)
 
 So, I added a few statements, after, and now the code looks like this.
 ```rust
