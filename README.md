@@ -6,6 +6,8 @@ by the JavaScript community, and a meme that shall not be named.
 For the love of Graydon, and all that is memory safe. DO NOT USE THIS CRATE. You probably can't even build it. If you want to test
 that it works, you can clone the repository and change the start and end values in `is-odd-macro-cor/src/lib.rs`.
 
+The below examples are of limited range, so that I could get some sort of output. 
+
 # Identifiers
 ```rust
 fn using_identifier(n: u32) {
