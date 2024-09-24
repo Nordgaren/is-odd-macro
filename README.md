@@ -8,13 +8,11 @@ that it works, you can clone the repository and change the start and end values 
 
 # Identifiers
 ```rust
-fn using_identifier() {
-    let n = 11;
+fn using_identifier(n: u32) {
     is_odd!(n);
 }
 
-fn using_identifier() {
-    let n = 11;
+fn using_identifier(n: u32) {
     if n as usize == 0usize {
         false
     } else if n as usize == 1usize {
