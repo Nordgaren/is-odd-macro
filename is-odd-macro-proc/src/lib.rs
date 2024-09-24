@@ -11,7 +11,7 @@ use proc_macro_error::proc_macro_error;
 /// Perfect example of how to use this crate...
 /// # Example
 /// ```rust
-/// use crate::is_odd_macro::is_odd;
+/// use crate::is_odd_macro_proc::is_odd;
 /// fn test_number() -> bool {
 ///     if is_odd!(10) {
 ///         println!("Odd!");
