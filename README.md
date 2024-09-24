@@ -494,8 +494,8 @@ fn is_odd(n: u32) -> bool {
     is_odd!(n)
 }
 ```
-For loop with jump table to load the right string to print.
-![image](https://github.com/user-attachments/assets/1e9e32a3-0af0-40b5-b668-20e8d041caf1)
+For loop with jump table to load the right string to print. An amazing mess!
+![image](https://github.com/user-attachments/assets/3acf6bfd-8b50-456c-91e5-85abf17437bf)
 
 The table generated. Just two offsets. Each one is the offset from the start of this table to the correct print statement.
 ![image](https://github.com/user-attachments/assets/965bd8d8-d51f-4fb6-94e1-9bd99fe375c6)
