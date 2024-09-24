@@ -1,6 +1,6 @@
 [package]
 # changeme
-name = "is-odd-macro"
+name = "is-odd"
 version = "0.1.0"
 edition = "2021"
 
