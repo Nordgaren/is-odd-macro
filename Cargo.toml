@@ -5,7 +5,7 @@ version = "0.1.0"
 edition = "2021"
 
 [workspace]
-members = ["proc-macro-template", "proc-macro-template-core"]
+members = ["is-odd-macro", "is-odd-macro-core"]
 
 [dependencies]
-proc-macro-template = { version = "0.1.0", path = "proc-macro-template" }
+is-odd-macro = { version = "0.1.0", path = "is-odd-macro" }

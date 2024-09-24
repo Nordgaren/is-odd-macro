@@ -1,5 +1,5 @@
 [package]
-name = "proc-macro-template"
+name = "is-odd-macro"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,7 +7,7 @@ edition = "2021"
 proc-macro = true
 
 [dependencies]
-proc-macro-template-core = { version = "0.1.0", path = "../proc-macro-template-core" }
+is-odd-macro-core = { version = "0.1.0", path = "../is-odd-macro-core" }
 proc-macro-error = "1.0"
 proc-macro2 = "1.0"
 
