@@ -528,26 +528,22 @@ fn is_odd(n: u32) -> bool {
 ```
 
 Nothing remarkable in release build. This shows the end of the for loop, and then prints the two statements.
-![image](https://github.com/user-attachments/assets/3877ac37-3cb0-4631-9d78-c9ea9763d086)
+![image](https://github.com/user-attachments/assets/2c81d47c-1017-46a0-a5e0-d45600ec860c)
 
 But in debug build, it also generated a ton of these jumps in between the code that has the loop
-![image](https://github.com/user-attachments/assets/b5203c7a-f8ad-43bb-888b-591d688dfd78)
+![image](https://github.com/user-attachments/assets/17c6db04-feb7-4929-a0bb-ec17cb9efe22)
 
-The JNZ leads to this
-![image](https://github.com/user-attachments/assets/1c4100c1-1421-4e88-8f0a-f3e7cc63a7a5)
+The JNZ in the for loop leads to print odd
+![image](https://github.com/user-attachments/assets/5aff8942-aa27-405e-a39b-22c57f9d22e8)
 
-and the JMP after leads to this.
-![image](https://github.com/user-attachments/assets/d81b2cee-a748-4e9b-aab3-01f948016ef2)
+and the JMP in the for loop after leads to print even.
+![image](https://github.com/user-attachments/assets/7a69c18d-d10b-44ab-b4c5-bb15cf1a7155)
 
 And this long list of jumps after lead to 
 ![image](https://github.com/user-attachments/assets/419e2bf2-b48c-4d3c-8394-ea31ff84ac9f)
 
 This, which prints out the -11 message, more weird jumping, and then
-![image](https://github.com/user-attachments/assets/e8431da6-a909-4aa1-8603-ddec76b3ac14)
+![image](https://github.com/user-attachments/assets/b844a089-a993-4969-b771-9e812f171373)
 
 We print out the 101 message and return...
-![image](https://github.com/user-attachments/assets/cbcce02d-01ef-4196-b622-570a126d48d8)
-
-
-
-
+![image](https://github.com/user-attachments/assets/db55991d-6625-474a-8fc1-0aec200f9e84)
