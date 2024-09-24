@@ -492,6 +492,7 @@ The machine code generated in release mode optimizes the following code to a jum
 ```rust
 fn main() {
     for i in 0..100 {
+        // Made a function that takes a u32 parameter, so the macro is generated in one function
         if is_odd(i) {
             println!("Hello, odd world!");
         } else {
@@ -499,6 +500,7 @@ fn main() {
         }
     }
 }
+// A function that takes a u32. Generates the identifier version of the macro.
 fn is_odd(n: u32) -> bool {
     is_odd!(n)
 }
@@ -519,6 +521,7 @@ So, I added a few statements, after, and now the code looks like this.
 ```rust
 fn main() {
     for i in 0..100 {
+        // Made a function that takes a u32 parameter, so the macro is generated in one function
         if is_odd(i) {
             println!("Hello, odd world!");
         } else {
@@ -526,6 +529,7 @@ fn main() {
         }
     }
 
+    // See if it generates control flow here or just prints. Also test negative number version
     if is_odd!(-11) {
         println!("Hello, odd world -11!");
     }
@@ -534,6 +538,7 @@ fn main() {
     };
 
 }
+// A function that takes a u32. Generates the identifier version of the macro.
 fn is_odd(n: u32) -> bool {
     is_odd!(n)
 }
