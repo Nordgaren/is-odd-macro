@@ -543,7 +543,7 @@ and the JMP in the for loop after leads to print even.
 ![image](https://github.com/user-attachments/assets/7a69c18d-d10b-44ab-b4c5-bb15cf1a7155)
 
 And this long list of jumps after lead to 
-![image](https://github.com/user-attachments/assets/419e2bf2-b48c-4d3c-8394-ea31ff84ac9f)
+![image](https://github.com/user-attachments/assets/ac892683-5fc5-4395-98c8-e354669977f4)
 
 This, which prints out the -11 message, more weird jumping, and then
 ![image](https://github.com/user-attachments/assets/b844a089-a993-4969-b771-9e812f171373)
