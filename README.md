@@ -471,3 +471,83 @@ fn negative_hexidecimal_number() {
     };
 }
 ```
+
+# Machine Code Generation
+
+In this test, I used a min of 0 and max of 200, for the `is_odd!` macro.
+
+The machine code generated in release mode optimizes the following code to a jump table
+```rust
+fn main() {
+    for i in 0..100 {
+        if is_odd(i) {
+            println!("Hello, odd world!");
+        } else {
+            println!("Hello, even world!");
+        }
+    }
+}
+fn is_odd(n: u32) -> bool {
+    is_odd!(n)
+}
+```
+For loop with jump table to load the right string to print.
+![image](https://github.com/user-attachments/assets/b85e49f7-8bae-4477-a753-1cd434bcdc7a)
+
+The table generated.
+![image](https://github.com/user-attachments/assets/965bd8d8-d51f-4fb6-94e1-9bd99fe375c6)
+
+In Debug builds, it doesn't optimize the `is_odd(n: u32)` function at all. This generates a comparison all the way to 199.
+![image](https://github.com/user-attachments/assets/1bfe02fd-5d73-450b-b01d-2c89b6c83031)
+
+It generates a very normal looking for loop.
+![image](https://github.com/user-attachments/assets/5d1f8d58-c917-4d10-a713-ab591b4b82da)
+
+So, I added a few statements, after, and now the code looks like this.
+```rust
+fn main() {
+    for i in 0..100 {
+        if is_odd(i) {
+            println!("Hello, odd world!");
+        } else {
+            println!("Hello, even world!");
+        }
+    }
+
+    if is_odd!(-11) {
+        println!("Hello, odd world -11!");
+    }
+    if is_odd!(101) {
+        println!("Hello, odd world 101!");
+    };
+
+}
+fn is_odd(n: u32) -> bool {
+    is_odd!(n)
+}
+```
+
+Nothing remarkable in release build. This shows the end of the for loop, and then prints the two statements.
+![image](https://github.com/user-attachments/assets/3877ac37-3cb0-4631-9d78-c9ea9763d086)
+
+But in debug build, it also generated a ton of these jumps in between the code that has the loop
+![image](https://github.com/user-attachments/assets/b5203c7a-f8ad-43bb-888b-591d688dfd78)
+
+The JNZ leads to this
+![image](https://github.com/user-attachments/assets/1c4100c1-1421-4e88-8f0a-f3e7cc63a7a5)
+
+and the JMP after leads to this.
+![image](https://github.com/user-attachments/assets/d81b2cee-a748-4e9b-aab3-01f948016ef2)
+
+And this long list of jumps after lead to 
+![image](https://github.com/user-attachments/assets/419e2bf2-b48c-4d3c-8394-ea31ff84ac9f)
+
+This, which prints out the -11 message, more weird jumping, and then
+![image](https://github.com/user-attachments/assets/e8431da6-a909-4aa1-8603-ddec76b3ac14)
+
+We print out the 101 message and return...
+![image](https://github.com/user-attachments/assets/cbcce02d-01ef-4196-b622-570a126d48d8)
+
+
+
+
