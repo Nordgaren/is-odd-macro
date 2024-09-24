@@ -1,6 +1,6 @@
 # is-odd-macro
 A crate that exports macros that generates an if-else statement that tests either an identifier, or a number against ever
-number in range from T::MIN to T::MAX, with a hard coded value of whether or not the number is odd or not. This was inspired
+number in range from T::MIN to T::MAX, with a hard coded value of whether or not the number is odd. This was inspired
 by the JavaScript community, and a meme that shall not be named.
 
 For the love of Graydon, and all that is memory safe. DO NOT USE THIS CRATE. You probably can't even build it. If you want to test
